@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: comic sans MS;
+            box-sizing: border-box;
+        }
+
+        #profile {
+            background-color: rgb(234, 193, 27);
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            font-size: 50px;
+            -webkit-text-fill-color: rgb(0, 0, 0);
+            text-shadow: 4px 4px 5px gray;
+            box-sizing: border-box;
+            /* Animation */
+            animation-name: boxn;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+
+        @keyframes boxn {
+            0% {
+                background-color: rgb(219, 16, 56);
+            }
+
+            25% {
+                transform: skewX(40deg);
+            }
+
+            50% {
+                border-radius: 50px 80px 120px 52px;
+            }
+
+            75% {
+                background-color: rgb(6, 190, 92);
+            }
+
+            80% {
+                transform: scaleX(1.5);
+            }
+
+            100% {
+                background-color: rgb(119, 6, 190);
+            }
+        }
+
+
+        #info {
+            margin-bottom: 10px;
+            width: 60%;
+            height: 250px;
+            float: left;
+            font-size: 130%;
+            -webkit-text-fill-color: rgb(0, 17, 255);
+            column-count: 2;
+            column-gap: 20px;
+            box-sizing: border-box;
+        }
+
+        #s1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 5px rgb(214, 200, 6);
+
+        }
+
+        #s2 {
+            font-size: 40px;
+            text-shadow: 2px 2px 5px rgb(203, 187, 6);
+        }
+
+        #s3 {
+            font-size: 30px;
+            text-shadow: 2px 2px 5px rgb(189, 171, 3);
+        }
+
+        #c {
+
+            margin-bottom: 10px;
+            float: right;
+            width: 39%;
+            height: 250px;
+            -webkit-text-fill-color: rgb(0, 17, 255);
+        }
+
+        #img {
+            width: 100%;
+            height: 250px;
+            clip-path: circle(60% at 50% 50%);
+            box-sizing: border-box;
+        }
+
+        #img:hover {
+            width: 100%;
+            height: 250px;
+            transition: ease-out;
+            clip-path: circle(80% at 50% 50%);
+            transition-duration: 2s;
+        }
+
+        #home {
+            background-color: rgb(228, 203, 44);
+            margin-top: 273px;
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            font-size: 300%;
+            -webkit-text-fill-color: rgb(0, 0, 0);
+            text-shadow: 4px 4px 5px gray;
+            box-sizing: border-box;
+        }
+
+        #navigation {
+
+            margin-top: 10px;
+            text-align: center;
+            width: 30%;
+            height: 800px;
+            float: left;
+            font-size: 140%;
+            overflow-x: scroll;
+            -webkit-text-fill-color: rgb(0, 17, 255);
+            list-style-type: none;
+            /* line-height: 200px; */
+            box-sizing: border-box;
+        }
+
+        .li {
+            -webkit-text-fill-color: rgb(4, 4, 188);
+            transition: ease-out;
+            transition-duration: 2s;
+            height: 87px;
+            transform: scale(1);
+        }
+
+        .li:hover {
+            background: linear-gradient(to right, black, blue, yellow, black);
+            transform: scale(1.5);
+        }
+
+        #content {
+            margin-top: 10px;
+            width: 69%;
+            height: 800px;
+            float: right;
+            background: url(html/m.jpg) round;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+        #textoverblur {
+            width: 920px;
+            height: 800px;
+            margin-top: 180px;
+            margin-left: 60px;
+            font-size: 40px;
+            -webkit-text-fill-color: rgb(244, 182, 10);
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 81px;
+        }
+
+        #hello {
+            font-size: 80px;
+        }
+
+        #footer {
+            background-color: gray;
+            margin-top: 825px;
+            /* text-align: center; */
+            width: 100%;
+            height: 130px;
+            font-size: 200%;
+            /* text-align: center; */
+            -webkit-text-fill-color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            /* border-color: rgb(242, 145, 0); */
+        }
+
+        #footertext {
+            position: absolute;
+            left: 30px;
+            box-sizing: border-box;
+        }
+
+        #fotdiv1 {
+            width: 70px;
+            height: 60px;
+            margin-left: 350px;
+            margin-top: 0px;
+            /* display: inline; */
+            border: 5px groove rgb(242, 162, 0);
+            border-radius: 100px 100px 100px 100px;
+            padding: 20px 10px 10px 10px;
+            /* background-color: rgb(207, 119, 119); */
+            perspective: 500px;
+            background-image: url(html/fb.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        #fotdiv1:hover {
+            /* transition-timing-function: ease-out; */
+            transition-duration: 1s;
+            transform: perspective(1500px);
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            transform: rotate3d(0, 10, 0, 180deg);
+        }
+
+        #fotdiv2 {
+            /* margin: 0px 50px 10px 200px; */
+            /* display: inline; */
+            width: 70px;
+            height: 60px;
+            margin-left: 550px;
+            margin-top: -98px;
+            border: 5px groove rgb(242, 162, 0);
+            border-radius: 100px 100px 100px 100px;
+            padding: 20px 10px 10px 10px;
+            /* background-color: rgb(207, 119, 119); */
+            perspective: 800px;
+            background-image: url(html/insta.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        #fotdiv2:hover{
+             /* transition-timing-function: ease-out; */
+             transition-duration: 1s;
+            transform: perspective(1500px);
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            transform: rotate3d(0, 10, 0, 180deg);
+        }
+
+        #fotdiv3 {
+            /* margin: 0px 50px 10px 200px; */
+            /* display: inline; */
+            width: 70px;
+            height: 60px;
+            margin-left: 750px;
+            margin-top: -100px;
+            border: 5px groove rgb(242, 162, 0);
+            border-radius: 100px 100px 100px 100px;
+            padding: 20px 10px 10px 10px;
+            /* background-color: rgb(207, 119, 119); */
+            perspective: 500px;
+            background-image: url(html/in.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #fotdiv3:hover{
+             /* transition-timing-function: ease-out; */
+             transition-duration: 1s;
+            transform: perspective(1500px);
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            transform: rotate3d(0, 10, 0, 180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="profile">MY PROFILE</div>
+    <div id="info">
+        <p><span id="s1">N</span>aveen <span id="s2">S</span>ingh <span id="s3">N</span>aithani<br>
+            <br>Amit Gram Gumaniwala,<br><br>
+            Rishikesh<br><br>
+            Phone no. 7535997430<br><br>
+            Email :naveennaithani8449@gmail.com
+        </p>
+    </div>
+    <div id="c"><img id="img" src="html/nav.jpg"></div>
+    <div id="home">Home</div>
+    <div id="navigation">
+        <div class="li1"><a href=OriginalPortfolio.html>Home</a></div>
+        <hr>
+        <div class="li"><a href=Qualification.html>Qualifications</a></div>
+        <hr>
+        <div class="li"><a href=Skill.html>Skill Set</a></div>
+        <hr>
+        <div class="li"><a href=Accomplishment.html>Accomplishment</a></div>
+        <hr>
+        <div class="li"><a href=Language.html>Language Known</a></div>
+        <hr>
+        <div class="li"><a href=Hobbies.html>Hobbies</a></div>
+        <hr>
+        <div class="li"><a href=formOriginal.html>Form</a></div>
+    </div>
+    <div id="content">
+        <div id="textoverblur"><span id="hello">Hello</span> , <br> I am Naveen Singh Naithani....</div>
+    </div>
+
+    <div id="footer"><span id="footertext">You can contact me:</span>
+
+        <a href="https://m.facebook.com"><div id="fotdiv1"></div></a>
+        <a href="https://instagram.com"><div id="fotdiv2"></div></a>
+        <a href="https://in.linkedin.com"><div id="fotdiv3"></div></a>
+
+    </div>
+
+
+</body>
+
+</html>

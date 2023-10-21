@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="calculator.css">
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="tabs">
+            <button data-tab="tab1" class="tablinks" style="height: 50px; background-color: rgb(113, 207, 244);">Arithmatic</button>
+            <button data-tab="tab2" class="tablinks" style="height: 50px; background-color: rgb(113, 207, 244);">Length</button>
+            <button data-tab="tab3" class="tablinks" style="height: 50px; background-color: rgb(113, 207, 244);">Binary</button>
+            <!-- <button data-tab="tab4" class="tablinks" style="height: 50px; background-color: rgb(113, 207, 244);">Currency</button> -->
+            </div>
+
+            <div id="tab1" class="tabcontent">
+            <form action="">
+                <div class="display">
+                    <input type="text" name="display" class="inp" style="font-size: 50px; border-radius: 2px; border: none; background-color: #055869; color: rgb(184, 233, 241);">
+                </div>
+
+                <!-- <div> -->
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8" onclick="display.value +='8'">
+                    <input type="button" value="9" onclick="display.value +='9'">
+                    <input type="button" value="AC" onclick="display.value =' '">
+                    <input type="button" value="*" onclick="display.value +='*'">
+                    <input type="button" value="(" onclick="display.value +='('">
+                <!-- </div> -->
+
+                <!-- <div> -->
+                    <input type="button" value="4" onclick="display.value +='4'">
+                    <input type="button" value="5" onclick="display.value +='5'">
+                    <input type="button" value="6" onclick="display.value +='6'">
+                    <input type="button" value="-" onclick="display.value +='-'">
+                    <input type="button" value="/" onclick="display.value +='/'">
+                    <input type="button" value=")" onclick="display.value +=')'">
+                <!-- </div> -->
+
+                <!-- <div> -->
+                    <input type="button" value="1" onclick="display.value +='1'">
+                    <input type="button" value="2" onclick="display.value +='2'">
+                    <input type="button" value="3" onclick="display.value +='3'">
+                    <input type="button" value="+" onclick="display.value +='+'">
+                    <input type="button" value="%" onclick="display.value +='%'">
+                    <input type="button" value="^" onclick="display.value +='**'">
+                <!-- </div> -->
+
+                <!-- <div> -->
+                    <input type="button" value="." value="." onclick="display.value +='.'" >
+                    <input type="button" value="0" value="0" onclick="display.value +='0'">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+                    <input type="button" value="DE" onclick="display.value =display.value.toString().slice(0,-1)">
+                    <input type="button" value="*" onclick="display.value +='*'">
+                <!-- </div> -->
+            </form>
+        </div>  <!--closing TAB1-->
+
+        <div id="tab2" class="tabcontent">
+            <div class="sel">
+
+            <input type="text" id="inputField" name="from" placeholder="Enter the Length" maxlength="100"
+            size="100"> 
+        
+        <div class="flx">
+          <label>From<br>
+    <select id="fromSelect" name="fr">
+        <option value="Kilometre">Kilometre</option>
+        <option value="Meter">Meter</option>
+        <option value="Centimetre">Centimetre</option>
+        <option value="Millimetres">Millimetres</option>
+        <option value="Micrometres">Micrometres</option>
+        <option value="Nanometre">Nanometre</option>
+    </select>
+</label>
+
+
+        <label>To<br>
+    <select name="t" id="to">
+        <option value="Kilometre">Kilometre</option>
+        <option value="Meter">Meter</option>
+        <option value="Centimetre">Centimetre</option>
+        <option value="Millimetres">Millimetres</option>
+        <option value="Micrometres">Micrometres</option>
+        <option value="Nanometre">Nanometre</option>
+    </select>
+        </label>
+    </div>
+    <button class="con">Convert</button>
+
+            </div>    
+
+        </div>
+        <div id="tab3" class="tabcontent">
+            <div class="converter">
+                <input type="text" id="binaryInput" placeholder="Enter a binary number">
+                <p id="decimalOutput">Decimal: </p>
+                <button class="con1" onclick="convertBinaryToDecimal()">Convert</button>
+            </div>
+
+        </div>
+        <div id="tab4" class="tabcontent">CURRENCY</div>
+        </div>
+    </div>
+
+</body>
+<script src="calculator.js"></script>
+</html>
